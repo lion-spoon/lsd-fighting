@@ -42,26 +42,26 @@ Material:
     m_Floats:
     - _AlphaCutoff: 0.5
     - _ColorDepthFade: -0.21
-    - _DisplaceStrength: -0.47
-    - _FoamCutoff: 0.71
-    - _FoamDepthFade: 9.8
-    - _FoamScale: 8.57
+    - _DisplaceStrength: 0.04
+    - _FoamCutoff: 173
+    - _FoamDepthFade: 0.001
+    - _FoamScale: 15.6
     - _FoamSpeed: 0.2
-    - _Opacity: 0.705
+    - _Opacity: 0.519
     - _ReflectionsIntensity: 0.242
     - _RefractionDepth: 3.37
-    - _RefractionStrength: 2.05
-    - _Smoothness: 0.572
+    - _RefractionStrength: -1.61
+    - _Smoothness: 0.269
     - _TurbulenceDistortionIntensity: 4.46
     - _TurbulenceScale: 1.77
     - _TurbulenceTiling: 10
-    - _WaveNormalIntensity: 0.691
-    - _WaveTiling01: 4
+    - _WaveNormalIntensity: 0.875
+    - _WaveTiling01: 6
     - _WorldtoObjectPosition: 0
     - __dirty: 0
     m_Colors:
-    - _ColorDeep: {r: 0, g: 0.4357107, b: 0.53773576, a: 0}
-    - _ColorShallow: {r: 0.9669811, g: 0.9925545, b: 1, a: 0}
+    - _ColorDeep: {r: 0, g: 0.5283019, b: 0.5283019, a: 0}
+    - _ColorShallow: {r: 0.495283, g: 0.88124305, b: 1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
-    - _FoamColor: {r: 0.80989677, g: 0.9811321, b: 0.9613541, a: 1}
+    - _FoamColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
