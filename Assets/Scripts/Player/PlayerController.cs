@@ -15,6 +15,11 @@ namespace Game.Player
         public float walkAcceleration = 8f;
         public float rotationSpeed = 90f;
         public bool isGrounded = false;
+        public Transform target;
+
+        public void TeleportTo(Vector3 target ) => controller.Move(target - transform.position);
+        public void TeleportCity() => TeleportTo(new Vector3(511.0f,51.169f,844.0f));
+        public void TeleportCity2() => TeleportTo(new Vector3(692.5f,27.19f,482.9f));
         //public GameObject meshPlayer;
 
 	    //Metodo Start e executado uma unica vez, quando o script e executado.
@@ -65,15 +70,11 @@ namespace Game.Player
 
             animator.SetFloat("Velocity", input.z);
 
-            if(Input.GetKey(KeyCode.Space) && isGrounded)
-            {  
+            if(Input.GetKey(KeyCode.Space) && isGrounded){  
+                Debug.Log("Pulo");
                 isGrounded = false;
                 velocity += new Vector3(0f,jumpForce,0f);
-                animator.SetBool("Jump", true);
-            }else{
-                animator.SetBool("Jump", false);
             }
-
             if(Input.GetKey(KeyCode.LeftShift)){
                 animator.SetBool("Run", true);  
             }else{
@@ -81,6 +82,8 @@ namespace Game.Player
                 animator.SetBool("Run", false);
             }
 		}
+
+        
 
 
    

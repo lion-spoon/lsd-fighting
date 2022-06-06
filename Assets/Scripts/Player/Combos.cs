@@ -11,10 +11,15 @@ public class Combos : MonoBehaviour
     public int noOfClicksLight = 0;
     float lastClickedTimeLight = 0;
     public float maxComboDelayLight = 0.9f;
+    public RuntimeAnimatorController[] newController;
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
+    }
+
+    public void ChangeAnimator(int i){
+        animator.runtimeAnimatorController = newController[i];
     }
 
     // Update is called once per frame
@@ -39,8 +44,6 @@ public class Combos : MonoBehaviour
             noOfClicksLight++;
             if(noOfClicksLight == 1){
                 animator.SetBool("light1", true);
-            }else{
-                animator.SetBool("light1", false);
             }
             noOfClicksLight = Mathf.Clamp(noOfClicksLight, 0, 4);
         }
