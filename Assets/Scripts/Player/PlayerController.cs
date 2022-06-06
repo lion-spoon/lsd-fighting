@@ -52,7 +52,10 @@ namespace Game.Player
         {
             Vector3 newInput = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")).normalized;
             
-            input = Vector3.Lerp(input, newInput, Time.deltaTime * walkAcceleration);
+            float v = Input.GetKey(KeyCode.W) ? 1 : (Input.GetKey(KeyCode.S) ? -1 : 0);
+            float h = Input.GetKey(KeyCode.A) ? -1 : (Input.GetKey(KeyCode.D) ? 1 : 0);
+
+            Vector3 input = new Vector3(h,0,v).normalized;
             
             Vector3 movement = walkSpeed * (transform.forward * input.z + transform.right * input.x);
 

@@ -28,8 +28,6 @@ public class Combos : MonoBehaviour
             noOfClicks++;
             if(noOfClicks == 1){
                 animator.SetBool("heavy1", true);
-            }else{
-                animator.SetBool("heavy1", false);
             }
             noOfClicks = Mathf.Clamp(noOfClicks, 0, 4);
         }
