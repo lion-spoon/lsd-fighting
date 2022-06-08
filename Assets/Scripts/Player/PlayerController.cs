@@ -45,6 +45,7 @@ namespace Game.Player
             controller.Move(velocity * Time.fixedDeltaTime);
             
             
+            
         }
 
 		void Update() 

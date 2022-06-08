@@ -47,6 +47,7 @@ public class Combos : MonoBehaviour
             }
             noOfClicksLight = Mathf.Clamp(noOfClicksLight, 0, 4);
         }
+        
     }
 
     public void returnLight1(){
