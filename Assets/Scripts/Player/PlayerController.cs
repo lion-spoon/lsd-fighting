@@ -20,6 +20,7 @@ namespace Game.Player
         public void TeleportTo(Vector3 target ) => controller.Move(target - transform.position);
         public void TeleportCity() => TeleportTo(new Vector3(511.0f,51.169f,844.0f));
         public void TeleportCity2() => TeleportTo(new Vector3(692.5f,27.19f,482.9f));
+        public void TeleportCity3() => TeleportTo(new Vector3(884.0f,51.0f,333.0f));
         //public GameObject meshPlayer;
 
 	    //Metodo Start e executado uma unica vez, quando o script e executado.

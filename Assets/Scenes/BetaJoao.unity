@@ -18016,6 +18016,7 @@ MonoBehaviour:
   newController:
   - {fileID: 9100000, guid: 9bd168df0c547884f99f74a9ddd718b9, type: 2}
   - {fileID: 9100000, guid: cc291b55455b50540bc0e961e2948c56, type: 2}
+  - {fileID: 9100000, guid: 0324d8d9d4e88c74a8946e2eb61ba10e, type: 2}
 --- !u!114 &2133819993
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18079,7 +18080,7 @@ Animator:
   m_GameObject: {fileID: 2133819991}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: e4eb76d6cd646be4f8aa0fc3325716ef, type: 3}
-  m_Controller: {fileID: 9100000, guid: cc291b55455b50540bc0e961e2948c56, type: 2}
+  m_Controller: {fileID: 9100000, guid: 0324d8d9d4e88c74a8946e2eb61ba10e, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
