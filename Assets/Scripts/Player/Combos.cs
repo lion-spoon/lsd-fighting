@@ -34,7 +34,7 @@ public class Combos : MonoBehaviour
             if(noOfClicks == 1){
                 animator.SetBool("heavy1", true);
             }
-            noOfClicks = Mathf.Clamp(noOfClicks, 0, 4);
+            noOfClicks = Mathf.Clamp(noOfClicks, 0, 5);
         }
         if(Time.time - lastClickedTimeLight > maxComboDelayLight){
             noOfClicksLight = 0;
@@ -45,7 +45,7 @@ public class Combos : MonoBehaviour
             if(noOfClicksLight == 1){
                 animator.SetBool("light1", true);
             }
-            noOfClicksLight = Mathf.Clamp(noOfClicksLight, 0, 4);
+            noOfClicksLight = Mathf.Clamp(noOfClicksLight, 0, 5);
         }
         
     }
@@ -81,6 +81,18 @@ public class Combos : MonoBehaviour
     }
 
     public void returnLight4(){
+        if(noOfClicksLight >=5){
+            animator.SetBool("light5", true);
+        }else{
+            animator.SetBool("light1", false);
+            animator.SetBool("light2", false);
+            animator.SetBool("light3", false);
+            animator.SetBool("light4", false);
+            noOfClicksLight = 0;
+        }	
+    }
+
+    public void returnLight5(){
         animator.SetBool("light1", false);
         animator.SetBool("light2", false);
         animator.SetBool("light3", false);
@@ -119,10 +131,23 @@ public class Combos : MonoBehaviour
     }
 
     public void return4(){
+        if(noOfClicks >= 4){
+            animator.SetBool("heavy5", true);
+        }else{
+            animator.SetBool("heavy1", false);
+            animator.SetBool("heavy2", false);
+            animator.SetBool("heavy3", false);
+            animator.SetBool("heavy4", false);
+            noOfClicks = 0;
+        }
+    }
+
+    public void return5(){
         animator.SetBool("heavy1", false);
         animator.SetBool("heavy2", false);
         animator.SetBool("heavy3", false);
         animator.SetBool("heavy4", false);
+        animator.SetBool("heavy5", false);
         noOfClicks = 0;
     }
 }
