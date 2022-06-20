@@ -36,6 +36,7 @@ namespace Game.Player
         [Header("REFERENCES")]
         public InputInterface input;
         public new Camera camera;
+        public Animator animator;
 
         [Header("SETTINGS")]
         public PlayerAxisMode axisMode = PlayerAxisMode.ByCameraAxis;
@@ -103,9 +104,13 @@ namespace Game.Player
             bool isMoving = Mathf.Abs(moveV) > 0.01f || Mathf.Abs(moveH) > 0.01f;
             bool isRunning = input["running"];
 
+            
+
             DirectionAxis axis = GetMovementDirectionAxis(isMoving);
             Vector3 newMovement = (moveV * axis.forward + moveH * axis.right).normalized; 
             movement = Vector3.Lerp(movement, newMovement, Time.deltaTime * movementLerpSpeed);
+
+            animator.SetFloat("Velocity",newMovement.magnitude);
 
             float walkSpeed = isRunning ? this.runSpeed : this.walkSpeed;
             float angleDifference = 0;

@@ -27293,6 +27293,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   input: {fileID: 11400000, guid: ad7cbaf7aa185054e9d33ca55834cc73, type: 2}
   camera: {fileID: 606665925}
+  animator: {fileID: 2133819996}
   axisMode: 0
   directionMode: 1
   lookMode: 0
