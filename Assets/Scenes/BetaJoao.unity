@@ -10692,7 +10692,7 @@ MonoBehaviour:
   mouseSensitivityX: 3
   mouseSensitivityY: -3
   mouseScrollSensitivity: 2
-  player: {fileID: 2133819993}
+  player: {fileID: 1568881762}
   focusRadius: 0.25
   focusCentering: 0.9
   rotationSpeed: 90
@@ -29491,13 +29491,13 @@ CharacterController:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Height: 2
-  m_Radius: 0.5
+  m_Height: 0.23
+  m_Radius: 0.15
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0.98, z: 0}
+  m_Center: {x: 0.01, y: 0.12, z: 0}
 --- !u!95 &1568881765
 Animator:
   serializedVersion: 3
@@ -34748,13 +34748,13 @@ CharacterController:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Height: 2
-  m_Radius: 0.5
+  m_Height: 0
+  m_Radius: 0.14
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0.98, z: 0}
+  m_Center: {x: 0, y: 0.16, z: 0}
 --- !u!4 &1842820271 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5123100888592078559, guid: 5f36cfcea5482d74b8c13f22667c10bd, type: 3}
