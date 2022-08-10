@@ -6,6 +6,7 @@ namespace Game.Player
     [RequireComponent(typeof(Camera))]
     public class OrbitCamera : MonoBehaviour 
     {
+        public static OrbitCamera Instance;
         public InputInterface input;
 
         [Range(1f, 20f)]
@@ -207,6 +208,10 @@ namespace Game.Player
         {
             float angle = Mathf.Acos(direction.y) * Mathf.Rad2Deg;
             return direction.x < 0f ? 360f - angle : angle;
+        }
+
+        void Start(){
+            Instance = this;
         }
     }
 }
