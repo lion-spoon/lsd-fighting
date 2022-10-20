@@ -65,6 +65,8 @@ namespace Game.Player
         public void TeleportCity2() => TeleportTo(new Vector3(692.5f,27.19f,482.9f));
         public void TeleportCity3() => TeleportTo(new Vector3(884.0f,51.0f,333.0f));
 
+        private bool activeForceField;
+
         private void Start() 
         {
             _controller = GetComponent<CharacterController>();
@@ -99,6 +101,11 @@ namespace Game.Player
 
         private void Update() 
         {
+            ativaCampoForca();
+
+            DesativaCampoForca();
+       
+            
             float moveV = input["move_v"][InputInterfaceEntryMode.Raw];
             float moveH = input["move_h"][InputInterfaceEntryMode.Raw];
             bool isMoving = Mathf.Abs(moveV) > 0.01f || Mathf.Abs(moveH) > 0.01f;
@@ -148,6 +155,23 @@ namespace Game.Player
             }
 
             _controller.Move((velocity + transform.forward * walkSpeed * movement.magnitude) * Time.deltaTime);
+        }
+
+        public void ativaCampoForca(){
+            if(Input.GetKeyDown(KeyCode.R)){
+                //ForceFieldController.Instance.SetOpenCloseValue(1.5f);
+                GameObject.FindWithTag("Force").GetComponent<ForceFieldController>().openCloseProgress = 2.0f;
+                activeForceField = true;
+            }
+                
+        }
+
+        public void DesativaCampoForca(){
+            if(Input.GetKeyDown(KeyCode.T)){
+                //ForceFieldController.Instance.SetOpenCloseValue(-1.5f);
+                GameObject.FindWithTag("Force").GetComponent<ForceFieldController>().openCloseProgress = -1.0f;
+                activeForceField = false;
+            }  
         }
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ForceFieldController : MonoBehaviour {
+    public static ForceFieldController Instance;
 
     public enum FFstate { SingleSpheres, MultipleSpheres };
     public FFstate forceFieldMode = FFstate.SingleSpheres;
@@ -44,6 +45,7 @@ public class ForceFieldController : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+        Instance = this;
         psmain = controlParticleSystem.main;
 
         GetRenderers();
@@ -166,7 +168,8 @@ public class ForceFieldController : MonoBehaviour {
         if (openAutoAnimation == true)
         {
             openCloseValue = val;
-        }        
+        }
+        
     }
 
     // Generating a texture from gradient variable
